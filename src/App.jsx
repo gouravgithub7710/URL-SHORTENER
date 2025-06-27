@@ -1,20 +1,45 @@
+//import { Link, RouterProvider } from 'react-router-dom'
 import './App.css'
-import { Button } from "@/components/ui/button"
-function App() {
- 
+import AppLayouts from './Layouts/AppLayouts'
+import Auth from './Pages/Auth'
+import Dashboard from './Pages/Dashboard'
+import RedirectLink from './Pages/RedirectLink'
+import LandingPage from './Pages/LandingPage'
+import Links from './Pages/Links'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+
+const router = createBrowserRouter([
+  {
+    element:<AppLayouts />,
+    children:[
+      {
+        path:'/',
+        element:<LandingPage/>
+      },
+      {
+        path:'/dashboard',
+        element:<Dashboard/>
+      },
+      {
+        path:'/auth',
+        element:<Auth/>
+      },
+      {
+        path:'/link/:id',
+        element:<Links/>
+      },
+      {
+        path:'/:id',
+        element:<RedirectLink/>
+      }
+    ]
+  }
+])
+function App() {
   return (
-   
-     
-       
-       <div className='text-center
-       text-2xl
-       text-blue-500'>
-      <h1>Hello</h1>
-       <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-    </div>
-    </div>
+    
+      <RouterProvider router={router}/>
       
         
     
