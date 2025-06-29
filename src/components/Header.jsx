@@ -16,23 +16,24 @@ const Header = () => {
 
       <div>
       {!user?
-        <Button onClick={()=>negavite('/auth')}>Login</Button>
+        <Button onClick={()=>negavite('/auth')} className='cursor-pointer'>Login</Button>
         :(
           <DropdownMenu>
   <DropdownMenuTrigger>
     <Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarImage src="https://github.com/shadcn.png" className='cursor-pointer border-0
+'/>
   <AvatarFallback>GG</AvatarFallback>
 </Avatar>
   </DropdownMenuTrigger>
   <DropdownMenuContent>
     <DropdownMenuLabel>Gourav Giri</DropdownMenuLabel>
     <DropdownMenuSeparator />
-    <DropdownMenuItem>
-   
+    <DropdownMenuItem className='cursor-pointer'>
+    <LinkIcon className='text-white-400'/>
     My Links</DropdownMenuItem>
-    <DropdownMenuItem className="text-red-400">
-   
+    <DropdownMenuItem className="text-red-400 cursor-pointer">
+    <LogOut className='text-red-400'/>
     <span>Logout</span>
     </DropdownMenuItem>
   </DropdownMenuContent>
