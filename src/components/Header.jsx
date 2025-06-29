@@ -2,6 +2,8 @@ import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import {Button} from './ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu'
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { LinkIcon, LogOut } from 'lucide-react'
 
 const Header = () => {
   const negavite = useNavigate()
@@ -17,14 +19,22 @@ const Header = () => {
         <Button onClick={()=>negavite('/auth')}>Login</Button>
         :(
           <DropdownMenu>
-  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuTrigger>
+    <Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>GG</AvatarFallback>
+</Avatar>
+  </DropdownMenuTrigger>
   <DropdownMenuContent>
-    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuLabel>Gourav Giri</DropdownMenuLabel>
     <DropdownMenuSeparator />
-    <DropdownMenuItem>Profile</DropdownMenuItem>
-    <DropdownMenuItem>Billing</DropdownMenuItem>
-    <DropdownMenuItem>Team</DropdownMenuItem>
-    <DropdownMenuItem>Subscription</DropdownMenuItem>
+    <DropdownMenuItem>
+   
+    My Links</DropdownMenuItem>
+    <DropdownMenuItem className="text-red-400">
+   
+    <span>Logout</span>
+    </DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>
         )
