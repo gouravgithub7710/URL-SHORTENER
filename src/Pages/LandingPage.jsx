@@ -1,6 +1,12 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import React from 'react'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const LandingPage = () => {
   return (
@@ -20,6 +26,16 @@ const LandingPage = () => {
         </Button>
       </form>
       <img src='/banner.jpeg' alt='banner' className='w-full my-11 md:px:11'/>
+
+      <Accordion type="multiple" collapsible className='w-full  md:px-11'>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
     </div>
   )
 }
