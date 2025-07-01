@@ -7,7 +7,7 @@ import { LinkIcon, LogOut } from 'lucide-react'
 
 const Header = () => {
   const negavite = useNavigate()
-  const user = true;
+  const user = false;
   return (
     <nav className='items-center flex justify-between p-4 '>
       <Link to='/'>
