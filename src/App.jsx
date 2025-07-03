@@ -38,8 +38,11 @@ const router = createBrowserRouter([
 ])
 function App() {
   return (
-    
+    <UrlProvider>
       <RouterProvider router={router}/>
+    </UrlProvider>
+    
+      
     
   )
 }
