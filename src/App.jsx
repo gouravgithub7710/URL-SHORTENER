@@ -7,7 +7,7 @@ import RedirectLink from './Pages/RedirectLink'
 import LandingPage from './Pages/LandingPage'
 import Links from './Pages/Links'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import UrlProvider from './Pages/Context'
 
 const router = createBrowserRouter([
   {
