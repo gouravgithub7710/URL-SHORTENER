@@ -80,21 +80,30 @@ const Signup = () => {
   return (
     <Card>
   <CardHeader>
-    <CardTitle>Login</CardTitle>
+    <CardTitle>Signup</CardTitle>
     <CardDescription>
-    to your account if you already have one</CardDescription>
+    Create a new account if you haven&rsquo;t already
+    </CardDescription>
      {errors && <Error message={errors.message} />}
   </CardHeader>
   <CardContent className='space-y-2'>
      <div className='space-y-1'>
       <Input 
-        name='email' 
-        type='email'  
-        placeholder="Enter Email"
+        name='name' 
+        type='text'  
+        placeholder="Enter Name"
         onChange={handleInputChange}
         />
      </div>
-     {errors.email && <Error message={errors.email} />}
+     {errors.name && <Error message={errors.name} />}
+     <div className='space-y-1'>
+      <Input 
+        name='email' 
+        type='email'  
+        placeholder="Enter Name"
+        onChange={handleInputChange}
+        />
+     </div>
       <div className='space-y-1'>
       <Input 
         name='password' 
