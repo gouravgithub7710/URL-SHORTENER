@@ -100,10 +100,11 @@ const Signup = () => {
       <Input 
         name='email' 
         type='email'  
-        placeholder="Enter Name"
+        placeholder="Enter Email"
         onChange={handleInputChange}
         />
      </div>
+     {errors.email && <Error message={errors.email} />}
       <div className='space-y-1'>
       <Input 
         name='password' 
