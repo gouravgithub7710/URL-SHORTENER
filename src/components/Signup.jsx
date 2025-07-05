@@ -121,7 +121,7 @@ const Signup = () => {
         ? 
       <BeatLoader size={10} color="#36d7b7"/> 
         : 
-      'Login'}
+      'Signup'}
     
     </Button>
   </CardFooter>
