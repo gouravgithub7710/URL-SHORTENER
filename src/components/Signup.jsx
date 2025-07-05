@@ -53,7 +53,7 @@ const Signup = () => {
    }, [data,error])
    
 
-    const handleLogin = async () => {
+    const handleSignup = async () => {
     setErrors([]);
     try {
       const schema = Yup.object().shape({
@@ -115,7 +115,7 @@ const Signup = () => {
       {errors.password && <Error message={errors.password} />}
   </CardContent>
   <CardFooter>
-    <Button onClick={handleLogin}>
+    <Button onClick={handleSignup}>
     {loading 
         ? 
       <BeatLoader size={10} color="#36d7b7"/> 
