@@ -8,6 +8,7 @@ import LandingPage from './Pages/LandingPage'
 import Links from './Pages/Links'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UrlProvider from './Context'
+import RequireAuth from './components/require-auth'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/dashboard',
-        element:<Dashboard/>
+        element:(
+          <RequireAuth>
+          <Dashboard/>
+          </RequireAuth>
+        ),
       },
       {
         path:'/auth',
@@ -27,7 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/link/:id',
-        element:<Links/>
+        element: (
+                  <RequireAuth>
+                  <Links/>
+                  </RequireAuth>
+                ),
       },
       {
         path:'/:id',
