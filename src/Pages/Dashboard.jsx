@@ -3,55 +3,56 @@ import {BarLoader} from "react-spinners";
 import {Filter} from "lucide-react";
 
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-// import {Input} from "@/components/ui/input";
-// import {CreateLink} from "@/components/create-link";
-// import LinkCard from "@/components/link-card";
-// import Error from "@/components/error";
+ import {Input} from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+ //import {CreateLink} from "@/components/create-link";
+ import LinkCard from "@/components/ui/link-card";
+ import Error from "@/components/error";
+ import useFetch from "@/components/Hooks/use-fetch";
 
-// import useFetch from "@/hooks/use-fetch";
-
-// import {getUrls} from "@/db/apiUrls";
-// import {getClicksForUrls} from "@/db/apiClicks";
-// import {UrlState} from "@/context";
+ import {getUrls} from "@/DB/ApiUrls";
+ import {getClicksForUrls} from "@/DB/ApiClicks";
+ import {UrlState} from "@/context";
+import CreateLink from "@/components/ui/create-link";
 
 
 const Dashboard = () => {
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const {user} = UrlState();
-  // const {loading, error, data: urls, fn: fnUrls} = useFetch(getUrls, user.id);
-  // const {
-  //   loading: loadingClicks,
-  //   data: clicks,
-  //   fn: fnClicks,
-  // } = useFetch(
-  //   getClicksForUrls,
-  //   urls?.map((url) => url.id)
-  // );
+  const [searchQuery, setSearchQuery] = useState("");
+  const {user} = UrlState();
+  const {loading, error, data: urls, fn: fnUrls} = useFetch(getUrls, user.id);
+  const {
+    loading: loadingClicks,
+    data: clicks,
+    fn: fnClicks,
+  } = useFetch(
+    getClicksForUrls,
+    urls?.map((url) => url.id)
+  );
 
-  // useEffect(() => {
-  //   fnUrls();
-  // }, []);
+  useEffect(() => {
+    fnUrls();
+  }, []);
 
-  // const filteredUrls = urls?.filter((url) =>
-  //   url.title.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
+  const filteredUrls = urls?.filter((url) =>
+    url.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-  // useEffect(() => {
-  //   if (urls?.length) fnClicks();
-  // }, [urls?.length]);
+  useEffect(() => {
+    if (urls?.length) fnClicks();
+  }, [urls?.length]);
 
   return (
     <div className="flex flex-col gap-8">
-      {true && 
+      {(loading || loadingClicks) && (
         <BarLoader width={"100%"} color="#36d7b7" />
-      }
+      )}
       <div className="grid grid-cols-2 gap-4">
         <Card>
           <CardHeader>
             <CardTitle>Links Created</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>0</p>
+            <p>{urls?.length}</p>
           </CardContent>
         </Card>
         <Card>
@@ -59,11 +60,11 @@ const Dashboard = () => {
             <CardTitle>Total Clicks</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>0</p>
+            <p>{clicks?.length}</p>
           </CardContent>
         </Card>
       </div>
-      {/* <div className="flex justify-between">
+      <div className="flex justify-between">
         <h1 className="text-4xl font-extrabold">My Links</h1>
         <CreateLink />
       </div>
@@ -79,7 +80,7 @@ const Dashboard = () => {
       {error && <Error message={error?.message} />}
       {(filteredUrls || []).map((url, i) => (
         <LinkCard key={i} url={url} fetchUrls={fnUrls} />
-      ))} */}
+      ))}
     </div>
   );
 };
