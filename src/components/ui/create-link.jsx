@@ -20,6 +20,7 @@ import {createUrl} from "@/DB/ApiUrls";
 import {BeatLoader} from "react-spinners";
 import {UrlState} from "@/context";
 import {QRCode} from "react-qrcode-logo";
+import { BASE_URL } from '../../DB/supabase'
 
 //import { error } from "console";
  
@@ -126,7 +127,7 @@ const CreateLink = () => {
         />
         {errors.longUrl && <Error message={errors.longUrl} />}
         <div className="flex items-center gap-2">
-          <Card className="p-2">shorturl.in</Card> /
+          <Card className="p-2">url-shortener-gourav.vercel.app</Card> /
           <Input
             id="customUrl"
             placeholder="Custom Link (optional)"

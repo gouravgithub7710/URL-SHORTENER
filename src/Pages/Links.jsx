@@ -11,6 +11,7 @@ import {useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import {BarLoader, BeatLoader} from "react-spinners";
 
+import { BASE_URL } from '../DB/supabase'  
 
 const Links = () => {
  const downloadImage = () => {
@@ -65,6 +66,7 @@ const Links = () => {
   if (url) {
     link = url?.custom_url ? url?.custom_url : url.short_url;
   }
+  const fullShortUrl = `${BASE_URL}/${link}`;
 
   return (
     <>
@@ -77,11 +79,13 @@ const Links = () => {
             {url?.title}
           </span>
           <a
-            href={`https://shorturl.in/${link}`}
+            // href={`https://shorturl.in/${link}`}
+             href={fullShortUrl}
             target="_blank"
             className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            https://shorturl.in/{link}
+            {/* https://shorturl.in/{link} */}
+             {fullShortUrl}
           </a>
           <a
             href={url?.original_url}
@@ -97,8 +101,11 @@ const Links = () => {
           <div className="flex gap-2">
             <Button
               variant="ghost"
-              onClick={() =>
-                navigator.clipboard.writeText(`https://shorturl.in/${link}`)
+              // onClick={() =>
+              //   navigator.clipboard.writeText(`https://shorturl.in/${link}`)
+              // }
+             onClick={() =>
+                navigator.clipboard.writeText(fullShortUrl)
               }
             >
               <Copy />

@@ -4,6 +4,8 @@ import {Button} from "@/components/ui/button";
 import useFetch from "@/components/hooks/use-fetch";
 import {deleteUrl} from "@/DB/ApiUrls";
 import {BeatLoader} from "react-spinners";
+import { BASE_URL } from '../../DB/supabase'
+
 
 
 
@@ -31,6 +33,8 @@ const LinkCard = ({url = [], fetchUrls}) => {
 
   const {loading: loadingDelete, fn: fnDelete} = useFetch(deleteUrl, url.id);
 
+const fullShortUrl = `${BASE_URL}/${url?.custom_url ? url?.custom_url : url.short_url}`;
+
   return (
     <div className="flex flex-col md:flex-row gap-5 border p-4 bg-gray-900 rounded-lg">
       <img
@@ -43,7 +47,8 @@ const LinkCard = ({url = [], fetchUrls}) => {
           {url?.title}
         </span>
         <span className="text-2xl text-blue-400 font-bold hover:underline cursor-pointer">
-          https://shorturl.in/{url?.custom_url ? url?.custom_url : url.short_url}
+          {/* https://shorturl.in/{url?.custom_url ? url?.custom_url : url.short_url} */}
+          {fullShortUrl}
         </span>
         <span className="flex items-center gap-1 hover:underline cursor-pointer">
           <LinkIcon className="p-1" />
@@ -57,7 +62,8 @@ const LinkCard = ({url = [], fetchUrls}) => {
         <Button
           variant="ghost"
           onClick={() =>
-            navigator.clipboard.writeText(`https://shorturl.in/${url?.short_url}`)
+            // navigator.clipboard.writeText(`https://shorturl.in/${url?.short_url}`)
+             navigator.clipboard.writeText(fullShortUrl)
           }
         >
           <Copy />
