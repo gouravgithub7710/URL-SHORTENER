@@ -2,7 +2,8 @@ import {Copy, Download, LinkIcon, Trash} from "lucide-react";
 import {Link} from "react-router-dom";
 //import {Button} from "../components/ui/button";
 import {Button} from "../ui/button";
-import useFetch from "@/components/hooks/use-fetch";
+//import useFetch from "@/components/hooks/use-fetch";
+import useFetch from "../Hooks/use-fetch";
 import {deleteUrl} from "@/DB/ApiUrls";
 import {BeatLoader} from "react-spinners";
 import { BASE_URL } from '../../DB/supabase'
