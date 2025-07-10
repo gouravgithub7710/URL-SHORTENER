@@ -18,7 +18,8 @@ import * as yup from "yup";
 import useFetch from "@/components/Hooks/use-fetch";
 import {createUrl} from "@/DB/ApiUrls";
 import {BeatLoader} from "react-spinners";
-import {UrlState} from "@/context";
+//import {UrlState} from "@/context";
+import {UrlState} from "../../Context";
 import {QRCode} from "react-qrcode-logo";
 import { BASE_URL } from '../../DB/supabase'
 
