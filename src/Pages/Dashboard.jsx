@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
  import {getUrls} from "@/DB/ApiUrls";
  import {getClicksForUrls} from "@/DB/ApiClicks";
- import {UrlState} from "@/context";
+ import {UrlState} from "../context";
 import CreateLink from "@/components/ui/create-link";
 
 

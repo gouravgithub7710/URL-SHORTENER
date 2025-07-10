@@ -36,4 +36,8 @@ export default defineConfig({
   server: {
     port: 5173,
   },
+   // For Vercel deployment
+  define: {
+    'process.env': process.env
+  }
 })
