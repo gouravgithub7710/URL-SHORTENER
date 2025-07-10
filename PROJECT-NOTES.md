@@ -1,9 +1,18 @@
 # 🔗 URL Shortener React Project Documentation
 
 # Install React
-  npm create vite@latest
-  npm i
-  npm run dev
+ 🔹 React Setup using Vite – Notes
+    Vite is a fast build tool for modern React apps with quick startup and hot reloading.
+
+    ✅ Installation Steps:
+    Create project:
+    npm create vite@latest
+
+    Install packages:
+    npm i
+
+    Start dev server:
+    npm run dev
 
 # Install Shadcn ui
   -follow this:
@@ -20,6 +29,14 @@
   -react-router-dom lets you switch between pages in a  React app without reloading. It helps handle routes  like /home or /about easily.
 
   -create createBrowserRouter in app.jsx for handel pages 
+
+
+# Install Graph --
+ npm install recharts
+
+    --  Recharts is a React-based charting library that makes it easy to create responsive, customizable charts.
+    Install it using: npm install recharts to add it to your React project.
+
 
 
 
