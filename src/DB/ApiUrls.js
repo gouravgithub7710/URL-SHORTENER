@@ -38,6 +38,7 @@ export async function createUrl({title, longUrl, customUrl, user_id}, qrcode) {
         qr,
       },
     ])
+    .maybeSingle();
     // .select();
 
   if (error) {
