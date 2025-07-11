@@ -42,6 +42,8 @@ const Dashboard = () => {
     if (urls?.length) fnClicks();
   }, [urls?.length]);
 
+ 
+
   return (
     <div className="flex flex-col gap-8">
       {(loading || loadingClicks) && (
