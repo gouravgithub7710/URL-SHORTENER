@@ -25,6 +25,43 @@ Backend: Supabase
 
 State Management: React Context API
 
+
+## 🖥️ Screenshots  
+
+<div align="center">
+  <figure>
+     <figcaption>🏠 Home Page with shortened URL display.</figcaption>
+    <br>
+     <br>
+   <img width="537" height="474" alt="homePage" src="https://github.com/user-attachments/assets/a9b88dce-832f-4d82-8d9d-a7a714143d53" />
+  </figure>
+<br>
+ <br>
+  <figure>
+   <figcaption>🔐 Authentication Page.</figcaption>
+     <br>
+       <br>
+   <img width="1072" height="945" alt="authentication" src="https://github.com/user-attachments/assets/ca9a8ffb-22de-4ecf-ac84-ed90ecd66e58" />
+  </figure>
+ <br>
+ <br>
+
+  <figure>
+       <figcaption>📊 Dashboard Page with all your links.</figcaption>
+     <br>
+    <br><img width="1845" height="954" alt="dashboard" src="https://github.com/user-attachments/assets/f76b9804-b2da-471a-8193-70ca6823febe" />
+  </figure>
+
+   <br>
+ <br>
+  <figure>
+          <figcaption>📈 Statistics Page with number of clicks , Location from where the clicks are done and the dype of device .</figcaption>
+       <br>
+ <br><img width="1394" height="950" alt="statsPage" src="https://github.com/user-attachments/assets/d00b036d-2559-4116-80d9-ef83f1d9f1ac" />
+  </figure>
+
+</div>
+
 ##  🚀 How to Run the Project
 
 ### 🛠️ 1. Clone the Repository
@@ -46,48 +83,3 @@ Create a .env file and add your Supabase credentials:
 ```bash
 npm run dev 
 ```
-## 🖥️ Screenshots  
-
-<div align="center">
-  <figure>
-     <figcaption>🏠 Home Page with shortened URL display.</figcaption>
-    <br>
-     <br>
-   <img width="537" height="474" alt="homePage" src="https://github.com/user-attachments/assets/a9b88dce-832f-4d82-8d9d-a7a714143d53" />
-
-    <img src="./screenshots/homePage.png" alt="Home Page" width="70%" style="border-radius: 10px;"/>
-  </figure>
-<br>
- <br>
-  <figure>
-   <figcaption>🔐 Authentication Page.</figcaption>
-     <br>
-       <br>
-   <img width="1072" height="945" alt="authentication" src="https://github.com/user-attachments/assets/ca9a8ffb-22de-4ecf-ac84-ed90ecd66e58" />
-
-    <img src="./screenshots/authentication.png" alt="Auth" width="70%" style="border-radius: 10px;"/>
-  </figure>
- <br>
- <br>
-
-  <figure>
-       <figcaption>📊 Dashboard Page with all your links.</figcaption>
-     <br>
-    <br><img width="1845" height="954" alt="dashboard" src="https://github.com/user-attachments/assets/f76b9804-b2da-471a-8193-70ca6823febe" />
-
-   
-    <img src="./screenshots/dashboard.png" alt="Dashboard" width="70%" style="border-radius: 10px;"/>
-  </figure>
-
-   <br>
- <br>
-  <figure>
-          <figcaption>📈 Statistics Page with number of clicks , Location from where the clicks are done and the dype of device .</figcaption>
-       <br>
- <br><img width="1394" height="950" alt="statsPage" src="https://github.com/user-attachments/assets/d00b036d-2559-4116-80d9-ef83f1d9f1ac" />
-
-   
-    <img src="./screenshots/statsPage.png" alt="stats" width="70%" style="border-radius: 10px;"/>
-  </figure>
-
-</div>
