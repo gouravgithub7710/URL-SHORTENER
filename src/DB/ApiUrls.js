@@ -38,7 +38,7 @@ export async function createUrl({title, longUrl, customUrl, user_id}, qrcode) {
         qr,
       },
     ])
-    .select();
+    // .select();
 
   if (error) {
     console.error(error);
@@ -66,7 +66,8 @@ export async function getLongUrl(id) {
     .from("urls")
     .select("id, original_url")
     .or(`short_url.eq.${id},custom_url.eq.${id}`)
-    .single();
+    .maybeSingle();
+    // .single();
 
   if (error) {
     console.error("Error fetching short link:");
@@ -82,7 +83,8 @@ export async function getUrl({id, user_id}) {
     .select("*")
     .eq("id", id)
     .eq("user_id", user_id)
-    .single();
+    .maybeSingle();
+    // .single();
 
   if (error) {
     console.error(error);

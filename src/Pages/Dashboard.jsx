@@ -42,7 +42,8 @@ const Dashboard = () => {
     if (urls?.length) fnClicks();
   }, [urls?.length]);
 
- 
+ console.log("🔎 URLs fetched:", data);
+
 
   return (
     <div className="flex flex-col gap-8">
