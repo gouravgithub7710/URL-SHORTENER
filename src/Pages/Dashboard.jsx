@@ -42,7 +42,7 @@ const Dashboard = () => {
     if (urls?.length) fnClicks();
   }, [urls?.length]);
 
- console.log("🔎 URLs fetched:", data);
+ 
 
 
   return (
