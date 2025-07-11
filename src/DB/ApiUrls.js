@@ -67,8 +67,9 @@ export async function getLongUrl(id) {
     .from("urls")
     .select("id, original_url")
     .or(`short_url.eq.${id},custom_url.eq.${id}`)
-    .maybeSingle();
-    // .single();
+    .single();
+    //.maybeSingle();
+     
 
   if (error) {
     console.error("Error fetching short link:");
@@ -84,8 +85,9 @@ export async function getUrl({id, user_id}) {
     .select("*")
     .eq("id", id)
     .eq("user_id", user_id)
-    .maybeSingle();
-    // .single();
+    .single();
+    //.maybeSingle();
+    
 
   if (error) {
     console.error(error);
