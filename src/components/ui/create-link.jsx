@@ -80,7 +80,9 @@ const CreateLink = () => {
       const canvas = ref.current.canvasRef.current;
       const blob = await new Promise((resolve) => canvas.toBlob(resolve));
 
-      await fnCreateUrl(blob);
+      //await fnCreateUrl(blob);
+      await fnCreateUrl({ ...formValues, user_id: user.id }, blob);
+
     } catch (e) {
       const newErrors = {};
 
@@ -91,6 +93,7 @@ const CreateLink = () => {
       setErrors(newErrors);
     }
   };
+
 
   return (
     <Dialog
