@@ -23,8 +23,6 @@ Frontend: React.js + Tailwind CSS + Shadcn UI
 
 Backend: Supabase
 
-State Management: React Context API
-
 
 ## 🖥️ Screenshots  
 
