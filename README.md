@@ -23,8 +23,6 @@ Frontend: React.js + Tailwind CSS + Shadcn UI
 
 Backend: Supabase
 
-State Management: React Context API
-
 
 ## 🖥️ Screenshots  
 
@@ -55,7 +53,7 @@ State Management: React Context API
    <br>
  <br>
   <figure>
-          <figcaption>📈 Statistics Page with number of clicks , Location from where the clicks are done and the dype of device .</figcaption>
+          <figcaption>📈 Statistics Page with number of clicks, Location from where the clicks are done and the dype of device .</figcaption>
        <br>
  <br><img width="1394" height="950" alt="statsPage" src="https://github.com/user-attachments/assets/d00b036d-2559-4116-80d9-ef83f1d9f1ac" />
   </figure>
@@ -64,21 +62,21 @@ State Management: React Context API
 
 ##  🚀 How to Run the Project
 
-### 🛠️ 1. Clone the Repository
+### 🛠️ 1. Clone the Repository:
 ```bash
 https://github.com/gouravgithub7710/URL-SHORTENER.git
 ```
-### 📦 2. Install Dependencies
+### 📦 2. Install Dependencies:
 ```bash
 npm install
 ```
-### 🔑 3.  Set Up Environment Variables
+### 🔑 3.  Set Up Environment Variables:
 Create a .env file and add your Supabase credentials:
 ```bash
 VITE_SUPABASE_URL=your-supabase-url  
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key  
 ```
-### 🚀 4.  Start the Development Server
+### 🚀 4.  Start the Development Server:
 Create a .env file and add your Supabase credentials:
 ```bash
 npm run dev 
