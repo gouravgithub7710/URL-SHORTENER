@@ -36,20 +36,7 @@ const LandingPage = () => {
 
 <p class="text-gray-400 mt-4 text-center max-w-screen-lg">LinkLytics doesn't just shrink URLs—it supercharges them. Create concise links in seconds, then harness powerful analytics to understand your audience and optimize your reach. Turn every shortened link into a data goldmine.</p>
       
-      {/* <form onSubmit={handleShorten}
-       className="flex flex-col sm:flex-row items-center justify-center mt-10 sm:mt-20 w-full max-w-2xl">
-       <div className="w-full flex flex-col sm:flex-row gap-2"></div>
-        <Input
-           type="url"
-           value={longUrl}
-          placeholder="Enter your Loooong URL"
-          onChange={(e)=>setLongUrl(e.target.value) }
-          className="h-full flex-1 px-4 py-4"
-        />
-        <Button type="submit" className="h-full" variant="destructive">
-        Shorten!
-        </Button>
-      </form> */}
+     
 
 
       <form
@@ -77,7 +64,7 @@ const LandingPage = () => {
       {/* <img src='/banner.jpeg' alt='banner' className='w-full my-11 md:px:11'/> */}
         <InfiniteSlider />
 
-      <Accordion type="multiple" collapsible className="w-full md:px-11">
+      <Accordion type="multiple" collapsible className="w-full md:px-11 pt-13">
         <AccordionItem value="item-1">
           <AccordionTrigger>
             How does the URL shortener works?
