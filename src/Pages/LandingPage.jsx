@@ -75,7 +75,7 @@ const LandingPage = () => {
 
 
       {/* <img src='/banner.jpeg' alt='banner' className='w-full my-11 md:px:11'/> */}
-        {/* <InfiniteSlider /> */}
+        <InfiniteSlider />
 
       <Accordion type="multiple" collapsible className="w-full md:px-11">
         <AccordionItem value="item-1">
