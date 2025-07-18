@@ -41,7 +41,7 @@ const FeatureItem = ({ Icon, title, description }) => (
 
 const InfiniteSlider = () => {
   return (
-    <div className="relative w-full max-w-6xl mx-auto mt-24 overflow-hidden ">
+    <div className="relative w-full max-w-6xl mx-auto mt-12 overflow-hidden ">
       {/* Gradient overlays for seamless effect */}
       <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
       <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
