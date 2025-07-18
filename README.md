@@ -33,12 +33,9 @@ Backend: Supabase
      <br>
 
    <img width="1898" height="888" alt="image" src="https://github.com/user-attachments/assets/36c44aec-9943-4935-af49-a686a93f1747" />
- <br>
-     <br>
-   <img width="1894" height="875" alt="image" src="https://github.com/user-attachments/assets/7d50787f-0a52-40b5-b132-64241b99fdf6" />
- <br>
-     <br>
-   <img width="1900" height="874" alt="image" src="https://github.com/user-attachments/assets/5238364c-5d33-46d5-b806-a7b84c80fb4b" />
+<img width="1893" height="878" alt="image" src="https://github.com/user-attachments/assets/063cbcd1-6170-468e-8df5-cd81e4c14d86" />
+<img width="1898" height="491" alt="image" src="https://github.com/user-attachments/assets/a07bcdeb-564a-4199-a37f-6ef2e20859ec" />
+
 
 
 
