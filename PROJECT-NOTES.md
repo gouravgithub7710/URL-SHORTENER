@@ -38,6 +38,10 @@
     Install it using: npm install recharts to add it to your React project.
 
 
+# Supabase database link:
+    https://supabase.com/dashboard/project/gbjjtepxlcvrkmseqwqx
 
 
-
+# Vercel Deployment link:
+    https://vercel.com/gouravs-projects-2620f0e7/url-shortener-gourav
+    
