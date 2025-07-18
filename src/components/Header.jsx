@@ -15,14 +15,47 @@ const Header = () => {
   const {loading,fn:fnLogout} = useFetch(logout)
   return (
     <>
-    <nav className='items-center flex justify-between p-4 '>
+    <nav className='items-center flex justify-between m-7 px-10 '>
       <Link to='/'>
-        <img src='/logo.png' className='h-16' alt='Trimrr logo'/>
+
+        <div className="text-center ">
+        <h1 
+          className="text-xl  sm:text-2xl lg:text-3xl font-black text-center cursor-pointer transform transition-all duration-300 hover:scale-110 hover:skew-x-2 relative group"
+          style={{
+            background: "linear-gradient(45deg, #ff0080, #00ffff, #8000ff, #ff8000)",
+            backgroundSize: "300% 300%",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            animation: "cyberpunkGlow 2s ease infinite",
+            fontFamily: "'Orbitron', 'Exo 2', monospace",
+            letterSpacing: "0.15em",
+            textShadow: "0 0 20px rgba(255, 0, 128, 0.8)",
+          }}
+        >
+          URL-SHORTENER
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+        </h1>
+         <style jsx>{`
+        @keyframes cyberpunkGlow {
+          0%, 100% { 
+            background-position: 0% 50%;
+            filter: hue-rotate(0deg);
+          }
+          50% { 
+            background-position: 100% 50%;
+            filter: hue-rotate(180deg);
+          }
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;700&display=swap');
+      `}</style>
+      </div>
       </Link>
 
       <div>
       {!user?
-        <Button onClick={()=>navigate('/auth')} className='cursor-pointer'>Login</Button>
+        <Button onClick={()=>navigate('/auth')} className='cursor-pointer bg-blue-400 '>Login</Button>
         :(
           <DropdownMenu>
   <DropdownMenuTrigger>
